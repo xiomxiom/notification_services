@@ -1,0 +1,42 @@
+spring:
+  application:
+    name: sample
+  security:
+    user:
+      name: user
+      password: password
+  web:
+    resources:
+      cache:
+        cachecontrol:
+          cache-public: true
+          max-age: 3600
+  datasource:
+     driverClassName: com.mysql.jdbc.Driver
+     url: jdbc:mysql://localhost:3306/ais_db?useSSL=false
+     username: root
+     password: password
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 8080
+  compression:
+    enabled: true
+
+
+
+     
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://${POSTGRES_HOST:localhost}:${POSTGRES_PORT:5432}/${POSTGRES_DB:db}
+#    username: ${POSTGRES_USER:postgres}
+#    password: ${POSTGRES_PASSWORD:password}
+#  jpa:
+#    hibernate:
+#      ddl-auto: validate
+
