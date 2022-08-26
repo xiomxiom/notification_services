@@ -19,6 +19,6 @@ public class NotifyRequest {
 	private String to;   
 	private String content ;
 	private String contentType ; //"text/plain"
-
+	private String key ;  //temp
 
 }

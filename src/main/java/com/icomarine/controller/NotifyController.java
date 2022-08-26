@@ -34,7 +34,7 @@ public class NotifyController {
 	  @PostMapping("/notify")  
 	  public ResponseEntity<Void> createNote(@RequestBody NotifyRequest notifyReq) {
 
-		    String SK="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";
+		    String SK=notifyReq.getKey();
 		    
 		    
 		    Email from = new Email(notifyReq.getFrom());
